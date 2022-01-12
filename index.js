@@ -117,9 +117,13 @@ Use the removeLastFlavor function below to do the following:
 //remove last item with pop! *remember it doesn't take an argument*
 //return the array
 
-function removeLastFlavor(){
- /*your code here*/
+function removeLastFlavor(array){
+ array.pop(); {
+   return array;
+ }
 }
+
+console.log("--TASK 4--", removeLastFlavor(originalFlavors));
 
 
 
@@ -136,12 +140,13 @@ Use the getFlavorByIndex function below to do the following:
 //2 parameters
 //receive an array, index
 //Ex: if passing in originalFlavors and 2 you would return originalFlavors[2];
-//return array[index
 
-function getFlavorByIndex(){
-  /*your code here*/
+
+function getFlavorByIndex(array, index){
+    return array[index]
 }
 
+console.log("--TASK 5--", getFlavorByIndex(originalFlavors, 2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -162,15 +167,24 @@ Use the removeFlavorByName function below to do the following:
 //array first then string
 
 
-function removeFlavorByName(/*your code here*/){
+function removeFlavorByName(array, string){
+
+  
   /*your code here*/
   //loop thru array
+  for (let i=0; i<array.length; i++) {
+    if (array[i]=== string) {
+       array.splice(i,1)
+    }
+  }
   //write a conditional that checks to see if index matches given flavor
   //if it does remove it
   //return array
   //reference codepen examples if needed*
+  return array;
 }
 
+console.log("--TASK 6--", removeFlavorByName(originalFlavors, "Rocky Road"));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
