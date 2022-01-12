@@ -51,7 +51,8 @@ function copy(array){
 }    
 
 
-console.log("task 1", copy(originalFlavors));
+
+console.log("--TASK 1--", copy(originalFlavors));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -63,14 +64,20 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
-//one paramater
+//one parameter
 //check to see that the length of array is 31
 //if it is we return true
 //else return false
 
 function is31Flavors(array){
- /*your code here*/
+ if (array.length === 31) {
+   return true
+ } else {
+   return false
+ }
 }
+
+console.log("--TASK 2--", is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -87,9 +94,13 @@ Use the addFlavor function below to do the following:
 //use unshift to add the flavor to the front of the array
 //return the array
 
-function addFlavor(array,stringFlavor){
- /*your code here*/
+function addFlavor(array,string){
+ if (array.unshift(string)) {
+   return array;
+ }
 }
+
+console.log("--TASK 3--", addFlavor(originalFlavors, "Rainbow Sherbert"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -106,7 +117,7 @@ Use the removeLastFlavor function below to do the following:
 //remove last item with pop! *remember it doesn't take an argument*
 //return the array
 
-function removeLastFlavor(array){
+function removeLastFlavor(){
  /*your code here*/
 }
 
@@ -116,7 +127,7 @@ function removeLastFlavor(array){
 Write a function that returns a flavor at a given index in the array.
 
 Use the getFlavorByIndex function below to do the following:
-  1. Recieve an array
+  1. Receive an array
   2. Receive a number (the desired index)
   3. Return the flavor located at the received index position
 
@@ -126,8 +137,8 @@ Use the getFlavorByIndex function below to do the following:
 //receive an array, index
 //Ex: if passing in originalFlavors and 2 you would return originalFlavors[2];
 //return array[index
-]
-function getFlavorByIndex(array, index){
+
+function getFlavorByIndex(){
   /*your code here*/
 }
 
@@ -217,9 +228,9 @@ Baskin Robins now offers new flavors, seasonal flavors, and even regional flavor
 from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors and store it in an array called randomFlavors.
 
 Use the getRandomFlavors function and new arrays below to do the following:
-  1. Receive the four arrays with all the differnet flavors (originalFlavors is above, the others are below)
+  1. Receive the four arrays with all the different flavors (originalFlavors is above, the others are below)
   2. Randomly pick flavors from all four arrays
-  3. Return a new array called randomFlavors that has a lenght of 31
+  3. Return a new array called randomFlavors that has a length of 31
 
   For example: getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].
 */
