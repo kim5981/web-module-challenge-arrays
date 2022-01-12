@@ -210,15 +210,22 @@ Use the filterByWord function below to do the following:
 //2 parameters: array, string
 //use includes *remember it's case sensitive*
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array,string){
   //create a new array called filteredArray to push values to
+  const filteredArray = [];
   //loop thru the original array and check each item
+  for (let i=0; i<array.length; i++) {
+   if (array[i].includes(string)) {
+     filteredArray.push(array[i]);
+   }
+  }
   //if the item includes the string i want to push it to that filtered array
-
+return filteredArray
 }
 
-//outside of the loop return 
+console.log("--TASK 7--", filterByWord(originalFlavors, "Chocolate"));
+
+//T-T
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
